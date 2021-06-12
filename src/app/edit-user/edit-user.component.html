@@ -1,0 +1,40 @@
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">User-{{currentId}}</h1>
+    
+</div>
+
+<div class="container">
+    <form [formGroup]="UserForm"  (ngSubmit)="updateForm()">
+    <div class="row">
+        
+        <div class="col-lg-6">
+            <label for="">UserName </label>
+            <input type="text"  class="form-control" formControlName="UserName">
+            
+        </div>
+        <div class="col-lg-6">
+            <label for="">id</label>
+            <input type="text"  class="form-control" formControlName="Id">
+        </div>
+        <div class="col-lg-6">
+            <label for="">Bill</label>
+            <input type="number"  class="form-control" formControlName="Bill">
+        </div>
+        <div class="col-lg-6">
+            <label for="">Type</label>
+            <select class="form-control" formControlName="Type">
+                <option>Electronic</option>
+                <option>cloth</option>
+            </select>
+        </div>
+    </div>
+  <div class="row form-group">
+      <div class="col-lg-6" >
+          <input type="submit" [disabled]="!UserForm.valid" class="btn btn-primary" value="update">
+          
+      </div>
+  </div>
+</form>
+</div>
+
+

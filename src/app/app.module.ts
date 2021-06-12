@@ -13,6 +13,12 @@ import { UserComponent } from './user/user.component';
 import { UserTableComponent } from './user-table/user-table.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
+import { CreateProductComponent } from './create-product/create-product.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
+import { UserViewComponent } from './user-view/user-view.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ProdctCreateComponent } from './prodct-create/prodct-create.component';
+import { EditProductComponent } from './edit-product/edit-product.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +32,17 @@ import { UserEditComponent } from './user-edit/user-edit.component';
     UserComponent,
     UserTableComponent,
     ProductEditComponent,
-    UserEditComponent
+    UserEditComponent,
+    CreateProductComponent,
+    EditUserComponent,
+    UserViewComponent,
+    ProdctCreateComponent,
+    EditProductComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

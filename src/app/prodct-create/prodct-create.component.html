@@ -1,0 +1,39 @@
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Product</h1>
+    
+</div>
+
+<div class="container">
+    <form [formGroup]="ProductForm"  (ngSubmit)="submitForm()">
+    <div class="row">
+        
+        <div class="col-lg-6">
+            <label for="">Product Name</label>
+            <input type="text"  class="form-control" formControlName="ProductName">
+            
+        </div>
+        <div class="col-lg-6">
+            <label for="">Price</label>
+            <input type="text"  class="form-control" formControlName="Price">
+        </div>
+        <div class="col-lg-6">
+            <label for="">Discount</label>
+            <input type="text"  class="form-control" formControlName="Discount">
+        </div>
+        <div class="col-lg-6">
+            <label for="">Type</label>
+            <select class="form-control" formControlName="Type">
+                <option>Electronic</option>
+                <option>cloth</option>
+            </select>
+        </div>
+    </div>
+  <div class="row form-group">
+      <div class="col-lg-6">
+          <input type="submit" [disabled]="!ProductForm.valid" class="btn btn-primary" value="submit">
+          
+      </div>
+  </div>
+</form>
+</div>
+
