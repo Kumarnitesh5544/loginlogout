@@ -46,7 +46,7 @@
                         <td>2011/04/25</td>
                         <td>
                             <a [routerLink]="['/edit-user',user.id]">Edit</a> |
-                            <a routerLink="/user-edit/1">Delete</a>
+                            <button type="button" (click)="deleteform(user.id)"> Delete</button>
                         </td>   
                     </tr>
                 

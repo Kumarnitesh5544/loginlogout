@@ -13,5 +13,8 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
   this.userList=(this.UserService.returnProduct());
   }
-
+  deleteform(i:number){
+    console.log(i);
+    this.UserService.remove(i);
+  }
 }

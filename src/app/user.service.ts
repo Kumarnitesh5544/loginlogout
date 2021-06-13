@@ -26,4 +26,7 @@ export class UserService {
     var index=this.UserData.findIndex(p=> p.id==id);
     this.UserData[index]= data;
 }
+remove(id:number){
+  this.UserData.splice(id-1,1);
+}
 }

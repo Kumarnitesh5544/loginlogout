@@ -12,6 +12,7 @@ export class ProductService {
     this.ProductData.push(data);
   }
   returnProduct(){
+
     return this.ProductData;
   }
 
@@ -23,6 +24,8 @@ export class ProductService {
     data.id=id;
     var index=this.ProductData.findIndex(p=> p.id==id);
     this.ProductData[index]= data;
+}  
+remove(id:number){
+  this.ProductData.splice(id-1,1);
 }
-
 }

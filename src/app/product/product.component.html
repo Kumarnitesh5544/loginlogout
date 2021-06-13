@@ -47,11 +47,12 @@
                         <td>2011/04/25</td>
                         <td>
                             <a [routerLink]="['/edit-product',product.id]">Edit</a> |
-                            <a routerLink="/product-edit/1">Delete</a>
+
+                            <button type="button" (click)="deleteform(product.id)"> Delete</button>
                         </td>   
                     </tr>
+                 
                 
-                   
                 </tbody>
             </table>
         </div>

@@ -16,16 +16,17 @@ export class EditProductComponent implements OnInit {
   constructor(private activeRoute:ActivatedRoute , private ProductService:ProductService , private route:Router) {
         this.currentId=activeRoute.snapshot.params.id;
    }
-
+   
   ngOnInit(): void {
     let currentuserdata=this.ProductService.returnProductbyId(this.currentId);
+    
     this.ProductForm = this.fb.group({
       "ProductName" :this.fb.control("",Validators.required),
       "Price" :this.fb.control(0,Validators.required),
       "Discount" :this.fb.control(0,[Validators.min(0),Validators.max(5)]),
       "Type" : this.fb.control("")
     })
-  this.ProductForm.patchValue(currentuserdata);
+    this.ProductForm.patchValue(currentuserdata);
   }
 
     updateForm(){

@@ -19,7 +19,7 @@ export class ProdctCreateComponent implements OnInit {
       "Discount" :this.fb.control(0,[Validators.min(0),Validators.max(5)]),
       "Type" : this.fb.control("")
     })
-
+ 
   }
   submitForm(){
     
