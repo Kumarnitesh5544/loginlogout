@@ -20,17 +20,17 @@
                         <th>Type</th>
                         <th>Start date</th>
                         <th>Action</th>
-                    </tr>
+                   </tr>
                 </thead>
                 <tfoot>
-                    <tr>
+             <!--       <tr>
                         <th>UserName</th>
                         <th>id</th>
                         <th>Bill</th>
                         <th>Type</th>
                         <th>Start date</th>
                         <th>Action</th>
-                    </tr>
+                    </tr>  -->
                 </tfoot>
                 <tbody>
                     <tr *ngFor= "let user of userList">
@@ -40,7 +40,7 @@
                           <a routerLink="/user-view/1">  {{user.UserName}}</a>
 
                           </td>
-                        <td>{{user.Id}}</td>
+                        <td>{{user.Id1}}</td>
                         <td>{{user.Bill}}</td>
                         <td>{{user.Type}}</td>
                         <td>2011/04/25</td>

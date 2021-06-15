@@ -15,16 +15,20 @@ export class CreateProductComponent implements OnInit {
   ngOnInit(): void {
     this.UserForm = this.fb.group({
       "UserName" :this.fb.control("",Validators.required),
-      "Id" :this.fb.control(0,Validators.required),
-      "Bill" :this.fb.control(0,[Validators.min(0),Validators.max(50000)]),
+      "Id1" :this.fb.control(0,Validators.required),
+    "Bill" :this.fb.control(0,[Validators.min(0),Validators.max(50000)]),
       "Type" : this.fb.control("")
     })
 
   }
   submitForm(){
     
-    this.userService.addProduct(this.UserForm.value);
-   this.route.navigate(["./user"]);
+  //  this.userService.addProduct(this.UserForm.value);
+  // this.route.navigate(["./user"]);
+   this.userService.addProduct(this.UserForm.value).subscribe((res)=>{
+    this.route.navigate(["./user"]);
+  })
+//  this.
   }
 
 }

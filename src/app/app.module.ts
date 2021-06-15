@@ -19,7 +19,7 @@ import { UserViewComponent } from './user-view/user-view.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProdctCreateComponent } from './prodct-create/prodct-create.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
-
+import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,11 +38,14 @@ import { EditProductComponent } from './edit-product/edit-product.component';
     UserViewComponent,
     ProdctCreateComponent,
     EditProductComponent
+  
+ 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

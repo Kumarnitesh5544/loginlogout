@@ -11,10 +11,21 @@ export class UserComponent implements OnInit {
   constructor(private UserService :UserService) { }
 
   ngOnInit(): void {
-  this.userList=(this.UserService.returnProduct());
+  //this.userList=(this.UserService.returnProduct());
+  this.load();
+ // }
   }
+    load(){
+      this.UserService.returnProduct().subscribe((res:any)=>{
+        this.userList=res;
+      })
+    }
+
   deleteform(i:number){
-    console.log(i);
-    this.UserService.remove(i);
+//    console.log(i);
+  //  this.UserService.remove(i);
+  this.UserService.remove(i).subscribe(()=>{
+    this.load();
+  })
   }
 }
