@@ -16,7 +16,7 @@ export class EditUserComponent implements OnInit {
         this.currentId=activeRoute.snapshot.params.id;
    } 
   ngOnInit(): void {
-    //let currentuserdata=this.userService.returnProductbyId(this.currentId);
+   
    
     this.UserForm = this.fb.group({
       "UserName" :this.fb.control("",Validators.required),
@@ -27,15 +27,17 @@ export class EditUserComponent implements OnInit {
     this.userService.returnProductbyId(this.currentId).subscribe((res)=>{
       this.currentuserdata=res;
       this.UserForm.patchValue(this.currentuserdata);
+     
+    }
    })
- // this.UserForm.patchValue(this.currentuserdata);
-  }
+
+ 
     updateForm(){
- // this.userService.updateProductbyId(this.currentId , this.UserForm.value);
+
  
    this.userService.updateProductbyId(this.currentId,this.UserForm.value).subscribe(()=>{
     this.route.navigate(["/dashboard-container/user"]);
    })
-  // this.route.navigate(["/user"]);
+
     }
 }
