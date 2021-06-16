@@ -12,57 +12,75 @@ import{EditUserComponent} from './edit-user/edit-user.component'
 import{UserViewComponent} from './user-view/user-view.component'
 import{ProdctCreateComponent} from './prodct-create/prodct-create.component'
 import{EditProductComponent} from './edit-product/edit-product.component'
-
+import {LoginComponent}  from './login/login.component'
+import { AuthGuard } from './auth.guard';
+import {DashboardContainerComponent}  from './dashboard-container/dashboard-container.component'
+//import { DashboardComponent } from './dashboard/dashboard.component';
 const routes: Routes = [
   {
-    path:"dashboard",
-    component: DashboardComponent
+    path:"login",
+    component:LoginComponent
   },
   {
-     path:"product",
-     component:ProductComponent
-  },
-  {
-    path:"product-edit/:id",
-    component:ProductEditComponent
-  },
-  {
-    path:"product-table",
-    component:ProductTableComponent
-  },
-  {
-    path:"user",
-    component:UserComponent
-  },
-  {
-    path:"user-edit/:id",
-    component:UserEditComponent
-  },
-  {
-    path:"user-table",
-    component:UserTableComponent
-  },
-  {
-    path:"create-product",
-    component:CreateProductComponent
-  },
-  {
-    path:"edit-user/:id",
-    component:EditUserComponent
-  },
-  {
-    path:"prodct-create",
-    component:ProdctCreateComponent
-  },
-  {
-    path:"user-view/:id",
-    component:UserViewComponent
-  },
-  {
-    path:"edit-product/:id",
-    component:EditProductComponent
-  }
+    path:"dashboard-container",
    
+    component: DashboardContainerComponent,
+  
+    canActivate:[AuthGuard],
+    children:[
+      {
+        path:"dashboard",
+        component:DashboardComponent
+      },
+      {
+        path:"product",
+        component:ProductComponent
+     },
+     {
+       path:"product-edit/:id",
+       component:ProductEditComponent
+     },
+     {
+       path:"product-table",
+       component:ProductTableComponent
+     },
+     {
+       path:"user",
+       component:UserComponent
+     },
+     {
+       path:"user-edit/:id",
+       component:UserEditComponent
+     },
+     {
+       path:"user-table",
+       component:UserTableComponent
+     },
+     {
+       path:"create-product",
+       component:CreateProductComponent
+     },
+     {
+       path:"edit-user/:id",
+       component:EditUserComponent
+     },
+     {
+       path:"prodct-create",
+       component:ProdctCreateComponent
+     },
+     {
+       path:"user-view/:id",
+       component:UserViewComponent
+     },
+     {
+       path:"edit-product/:id",
+       component:EditProductComponent
+     }
+      
+    ],
+  }, 
+  
+  
   
 ];
 

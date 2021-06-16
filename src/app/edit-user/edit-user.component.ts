@@ -34,7 +34,7 @@ export class EditUserComponent implements OnInit {
  // this.userService.updateProductbyId(this.currentId , this.UserForm.value);
  
    this.userService.updateProductbyId(this.currentId,this.UserForm.value).subscribe(()=>{
-    this.route.navigate(["/user"]);
+    this.route.navigate(["/dashboard-container/user"]);
    })
   // this.route.navigate(["/user"]);
     }

@@ -20,6 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ProdctCreateComponent } from './prodct-create/prodct-create.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
 import {HttpClientModule} from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { DashboardContainerComponent } from './dashboard-container/dashboard-container.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +39,9 @@ import {HttpClientModule} from '@angular/common/http';
     EditUserComponent,
     UserViewComponent,
     ProdctCreateComponent,
-    EditProductComponent
+    EditProductComponent,
+    LoginComponent,
+    DashboardContainerComponent
   
  
   ],

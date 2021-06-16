@@ -26,7 +26,7 @@ export class CreateProductComponent implements OnInit {
   //  this.userService.addProduct(this.UserForm.value);
   // this.route.navigate(["./user"]);
    this.userService.addProduct(this.UserForm.value).subscribe((res)=>{
-    this.route.navigate(["./user"]);
+    this.route.navigate(["./dashboard-container/user"]);
   })
 //  this.
   }

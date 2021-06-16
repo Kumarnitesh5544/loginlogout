@@ -25,7 +25,7 @@ export class ProdctCreateComponent implements OnInit {
     
     //this.ProductService.addProduct(this.ProductForm.value);
     this.ProductService.addProduct(this.ProductForm.value).subscribe((res)=>{
-      this.route.navigate(["./product"]);
+      this.route.navigate(["./dashboard-container/product"]);
     })
  //  this.route.navigate(["./product"]);
   }
