@@ -23,11 +23,11 @@ export class ProdctCreateComponent implements OnInit {
   }
   submitForm(){
     
-    //this.ProductService.addProduct(this.ProductForm.value);
+    
     this.ProductService.addProduct(this.ProductForm.value).subscribe((res)=>{
       this.route.navigate(["./dashboard-container/product"]);
     })
- //  this.route.navigate(["./product"]);
+
   }
 
 }
