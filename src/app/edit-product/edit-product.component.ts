@@ -31,13 +31,12 @@ export class EditProductComponent implements OnInit {
   
   this.ProductService.returnProductbyId(this.currentId).subscribe((res)=>{
     this.currentuserdata=res
-     // this.ProductForm.patchValue(currentProductdata);
+    
      this.ProductForm.patchValue(this.currentuserdata)
   })
 }
     updateForm(){
- //   this.ProductService.updateProductbyId(this.currentId , this.ProductForm.value);
-//    this.route.navigate(["/product"]);
+
 
 this.ProductService.updateProductbyId(this.currentId , this.ProductForm.value).subscribe(()=>{
   this.route.navigate(["/dashboard-container/product"]);
